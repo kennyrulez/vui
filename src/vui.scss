@@ -1,0 +1,16 @@
+// import libraries
+/* 
+    Imported libraries should not be touched unless you wanna update them.
+*/
+@import "lib/columns";      // grid system      https://github.com/jgthms/bulma/blob/master/sass/grid/columns.sass
+@import "lib/normalize";    // normalize css    https://github.com/JohnAlbin/normalize-scss
+@include normalize();
+
+/*
+    From now on, you can edit these imports.
+*/
+// import settings
+@import "settings";         // settings includings: fonts, color, etc...
+
+// dom elements
+@import "dom";              // HTML DOM elements

@@ -1,0 +1,532 @@
+@import "settings";
+$border-radius: 3px;
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  vertical-align: sub;
+}
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  font-family: $body-font;
+  font-weight: $body-font-weight;
+  line-height: $body-line-height;
+  background-color: $body-background-color;
+}
+
+a {
+  text-decoration: none;
+  color: $accent;
+  transition: color 0.2s ease 0s;
+
+  &:hover {
+    color: darken($accent, 20%);
+  }
+}
+
+abbr[data-original-title],
+abbr[title] {
+  border-bottom: 1px dotted #777;
+  cursor: help;
+}
+
+blockquote {
+  border-left: 5px solid #eee;
+  font-size: 17.5px;
+  margin: 0 0 20px;
+  padding: .8em 20px;
+
+  footer {
+    &:before {
+      content: "- ";
+    }
+    color: #777;
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857;
+  }
+}
+
+button,
+input[type=button],
+input[type=submit],
+.behave-as-button {
+  background-color: $gray;
+  color: $font-color;
+  border: none;
+  border-radius: $border-radius;
+  display: inline-block;
+  font-size: 0.8125em;
+  transition: background 0.3s ease 0s, color 0.3s ease 0s;
+  text-transform: uppercase;
+  padding: 0.75em 1.75em;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: darken($gray, 20%);
+    color: #fff;
+  }
+
+  @each $key, $value in $button-palette {
+    $bgcolor: nth($value, 1);
+    $fontcolor: nth($value, 2);
+
+    &.#{$key} {
+      background-color: $bgcolor;
+      color: $fontcolor;
+
+      &:hover,
+      &:focus {
+        background-color: darken($bgcolor, 20%);
+      }
+    }
+  }
+}
+
+dl {
+  dt {
+    background-color: $gray;
+    padding: .5em 1em;
+    font-weight: bold;
+    font-family: $heading-font;
+    line-height: $heading-line-height;
+    text-transform: uppercase;
+  }
+
+  dd {
+    padding: .5em .3em;
+  }
+}
+
+code {
+  background-color: $gray;
+  padding: 1% 2%;
+  border-radius: $border-radius;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJjb2RlIiBvcGFjaXR5PSIwLjc1Ij4NCgk8cGF0aCBpZD0ibGVmdC1icmFja2V0IiBkPSJNNCwxMnYtMWgxYzEsMCwxLDAsMS0xVjcuNjE0QzYsNy4xLDYuMDI0LDYuNzE4LDYuMDczLDYuNDcyQzYuMTI3LDYuMjIsNi4yMTIsNi4wMDksNi4zMyw1LjgzOSAgIEM2LjUzNCw1LjU2LDYuODAzLDUuMzY0LDcuMTM4LDUuMjU1QzcuNDczLDUuMTQsOC4wMSw1LDguOTczLDVIMTB2MUg5LjI0OGMtMC40NTcsMC0wLjc3LDAuMTkxLTAuOTM2LDAuNDA4ICAgQzguMTQ1LDYuNjIzLDgsNi44NTMsOCw3LjQ3NnYxLjg1N2MwLDAuNzI5LTAuMDQxLDEuMTgtMC4yNDQsMS40OTNjLTAuMiwwLjMwNy0wLjU2MiwwLjUyOS0xLjA5LDAuNjY3ICAgYzAuNTM1LDAuMTU1LDAuOSwwLjM4NSwxLjA5NiwwLjY4OEM3Ljk2MSwxMi40ODQsOCwxMi45MzgsOCwxMy42NjV2MS44NjJjMCwwLjYxOSwwLjE0NSwwLjg0OCwwLjMxMiwxLjA2MiAgIGMwLjE2NiwwLjIyLDAuNDc5LDAuNDA3LDAuOTM2LDAuNDA3TDEwLDE3bDAsMHYxSDguOTczYy0wLjk2MywwLTEuNS0wLjEzMy0xLjgzNS0wLjI0OGMtMC4zMzUtMC4xMDktMC42MDQtMC4zMDctMC44MDgtMC41OTEgICBjLTAuMTE4LTAuMTY1LTAuMjAzLTAuMzc0LTAuMjU3LTAuNjI1QzYuMDI0LDE2LjI4Myw2LDE1LjksNiwxNS4zODdWMTNjMC0xLDAtMS0xLTFINHoiLz4NCgk8dXNlIHRyYW5zZm9ybT0ibWF0cml4KC0xLDAsMCwxLDI0LDApIiBpZD0icmlnaHQtYnJhY2tldCIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB4bGluazpocmVmPSIjbGVmdC1icmFja2V0Ii8+DQo8L2c+DQo8L3N2Zz4=);
+  background-repeat: no-repeat;
+}
+
+details {
+  background-color: $gray;
+
+  summary {
+    padding: 1%;
+    font-weight: bold;
+    background-color: darken($gray, 30%);
+    margin-bottom: .3em;
+  }
+}
+
+figure {
+  figcaption {
+    margin-top: .3em;
+    font-size: 90%;
+    font-style: italic;
+  }
+}
+
+form {
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+
+    legend {
+      font-family: $heading-font;
+      line-height: $heading-line-height;
+    }
+  }
+
+  label {
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+    padding: 1% 0 0 0;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 1em !important;
+    margin-bottom: .8em;
+    border-radius: $border-radius;
+  }
+
+  input:not([type=submit]):not([type=button]):not([type=file]):not([type=checkbox]):not([type=radio]),
+  textarea {
+    border-color: $gray;
+    font-weight: 400;
+    border: 1px solid $gray;
+    border-bottom: 3px solid darken($gray, 30%);
+
+    &:focus {
+      border-color: darken($gray, 40%);
+      outline: none;
+    }
+
+    &:disabled {
+      border-color: lighten($gray, 40%);
+      cursor: not-allowed;
+    }
+
+    &.error {
+      border: 1px solid $red;
+      border-bottom: 3px solid $red;
+    }
+  }
+
+  select {
+    appearance: none;
+    border: 1px solid $gray;
+    border-bottom: 3px solid darken($gray, 30%);
+    border-radius: $border-radius;
+    color: inherit;
+    outline: none;
+    padding: .3% .5%;
+    vertical-align: middle;
+
+    &[size],
+    &[multiple] {
+      height: auto;
+
+      option {
+        padding: .3% .5%;
+      }
+    }
+
+    &:not([multiple]):not([size]) {
+      background: #fff url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center/.4rem .5rem;
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  // Adapted from this beautiful pen: https://codepen.io/raubaca/pen/ONzBxP
+  .input-radio,
+  .input-checkbox {
+    input[type=checkbox],
+    input[type=radio] {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    label {
+      font-weight: initial;
+      width: auto !important;
+      padding: 0;
+      position: relative;
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding-left: 30px;
+      padding-right: 10px;
+      line-height: 36px;
+      cursor: pointer;
+      transition: .25s all ease;
+
+      &::before {
+        content: " ";
+        position: absolute;
+        top: 6px;
+        left: 0;
+        display: block;
+        width: 24px;
+        height: 24px;
+        border: 2px solid $accent;
+        border-radius: 4px;
+        z-index: -1;
+        transition: .25s all ease;
+      }
+    }
+
+    input[type=radio] {
+      & + label::before {
+        border-radius: 18px;
+      }
+    }
+
+    input[type=radio],
+    input[type=checkbox] {
+      &:checked + label {
+        padding-left: 10px;
+        color: #fff;
+
+        &::before {
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: $accent;
+        }
+      }
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  line-height: $heading-line-height;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 1%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.3rem;
+}
+
+hr {
+  height: 1px;
+  color: darken($gray, 10%);
+  background: darken($gray, 10%);
+  font-size: 0;
+  border: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0 0 1% 0;
+  padding: 0;
+
+  li {
+    border-left: 3px solid $gray;
+    margin-bottom: .3%;
+    padding: .3% 1%;
+
+    ul,
+    ol {
+      margin: .8% 0 0 0;
+
+      li {
+        border-left-color: $gray;
+      }
+    }
+  }
+}
+
+ol {
+  list-style-type: none;
+  margin: 0 0 1% 0;
+  padding: 0;
+
+  li {
+    counter-increment: step-counter;
+    margin-bottom: .3em;
+    padding: .3% 1%;
+
+    ul,
+    ol {
+      margin: .8% 0 0 0;
+    }
+
+    &::before {
+      content: counter(step-counter);
+      margin-right: 5px;
+      font-size: 80%;
+      background-color: $gray;
+      font-weight: bold;
+      padding: .3% .8%;
+      border-radius: $border-radius;
+    }
+  }
+}
+
+mark {
+  background-color: $accent;
+}
+
+meter {
+  width: 100%;
+  height: 2em;
+  appearance: none;
+  border-radius: $border-radius;
+  background: #eee;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+  border-radius: $border-radius;
+
+  &::-webkit-meter-bar {
+    background: #eee;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+    border-radius: $border-radius;
+  }
+
+  &::-webkit-meter-optimum-value {
+    background: $green;
+    border-radius: $border-radius;
+  }
+
+  &::-webkit-meter-suboptimum-value {
+    background: $yellow;
+    border-radius: $border-radius;
+  }
+
+  &::-webkit-meter-even-less-good-value {
+    background: $red;
+    border-radius: $border-radius;
+  }
+
+  &::-moz-meter-bar {
+    border-radius: $border-radius;
+  }
+
+  &:-moz-meter-optimum::-moz-meter-bar {
+    background: $green;
+  }
+
+  &:-moz-meter-sub-optimum::-moz-meter-bar {
+    background: $yellow;
+  }
+
+  &:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+    background: $red;
+  }
+}
+
+pre {
+  white-space: pre-wrap;
+  overflow-x: auto;
+  tab-size: 4;
+  background-color: #1d2a34;
+  color: #fff;
+  padding: 1% 2%;
+  border-radius: $border-radius;
+  border-left: .8em solid $orange;
+}
+
+progress {
+  width: 100%;
+  height: 2em;
+  appearance: none;
+  background: $gray;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+  border-radius: $border-radius;
+
+  &[value] {
+    appearance: none;
+  }
+
+  &:not([value]) {
+    appearance: none;
+  }
+
+  &::-webkit-progress-bar {
+    background: $gray;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+    border-radius: $border-radius;
+  }
+
+  &::-webkit-progress-value {
+    background-color: $accent;
+    border-radius: $border-radius;
+  }
+
+  &::-moz-progress-bar {
+    background-color: $accent;
+    border-radius: $border-radius;
+  }
+}
+
+q {
+  &::before {
+    content: - \;;
+  }
+
+  &::after {
+    content: \;;
+  }
+  padding-left: 2em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  caption {
+    padding-bottom: 0.3em;
+    padding-top: .3em;
+    text-align: left;
+  }
+
+  thead {
+    border-bottom: 2px solid $gray;
+  }
+
+  th {
+    text-align: left;
+    padding: 1% .5%;
+  }
+
+  td {
+    padding: 0.5% .5%;
+    border-bottom: 1px solid $gray;
+  }
+
+  &.zebra {
+    tbody>tr:nth-of-type(2n+1) {
+      background-color: lighten($gray, 5%);
+    }
+  }
+
+  &.bordered {
+    thead {
+      border: none;
+    }
+
+    th,
+    td {
+      border: 1px solid $gray;
+    }
+  }
+
+  &.hover {
+    tbody > tr {
+      &:hover,
+      &:focus {
+        background-color: lighten($gray, 5%);
+      }
+    }
+  }
+}

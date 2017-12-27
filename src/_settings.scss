@@ -1,0 +1,27 @@
+// fonts
+$body-font:             sans-serif;
+$body-line-height:      1.2;
+$body-font-weight:      300;
+$heading-font:          serif;
+$heading-line-height:   1.4;
+$heading-font-weight:   500;
+
+// color palette
+$body-background-color: #ffffff; 
+$font-color:            #333333;
+
+$accent:                #2ca8ff;
+
+$green:                 #2ecc71;
+$yellow:                #f1c40f;
+$orange:                #e67e22;
+$red:                   #cf2b1a;
+$gray:                  #CDCDCD;
+
+// button color palette: [key = name, value = array] of background-color and font color
+$button-palette: (
+    success: ($green, #fff), 
+    info: ($yellow, #fff), 
+    warning: ($orange, #fff), 
+    error: ($red,#fff)
+)

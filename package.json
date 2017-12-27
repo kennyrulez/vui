@@ -1,0 +1,40 @@
+{
+  "name": "vui",
+  "version": "0.1.0",
+  "description": "View User Interface: a dead simple (S)CSS ui kit",
+  "homepage": "http://kennyrulez.github.io/vui",
+  "bugs": {
+    "url": "https://github.com/kennyrulez/vui/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kennyrulez/vui"
+  },
+  "main": "docs/index.html",
+  "scripts": {
+    "build": "node-sass --include-path src src/vui.scss dist/vui.css --output-style compressed",
+    "watch": "nodemon -e scss -x \"npm run build\""
+  },
+  "author": {
+    "name": "Valerio Fornito",
+    "email": "fornito.valerio@gmail.com",
+    "url": "https://kennyrulez.github.io"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "4.7.2",
+    "nodemon": "1.14.3"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "ui",
+    "flexbox",
+    "responsive",
+    "mobile-friendly",
+    "front-end",
+    "sass",
+    "scss",
+    "modern"
+  ]
+}
