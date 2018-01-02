@@ -5,7 +5,7 @@ VUI (View User Interface, yeah that's the best I can do...) is a simple scss bas
 
 ## [DEMO](https://kennyrulez.github.io/vui)
 
-#2018 Update
+# 2018 Update
 Added experimental navigationbar (horizontal only) with the classic hamburger when in mobile.
 
 ## Grid system
