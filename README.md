@@ -1,7 +1,7 @@
 # VUI
 ### A dead simple (S)CSS ui kit
 
-VUI (View User Interface, yeah that's the best I can do...) is a simple scss based ui kit. I really love other framework out there (bulma, angular material, uikit, etc...), but I prefer one that style direclty the dom's tags, without the clutter of wrapping them on a hell of tags (whenever possible obviously).
+VUI (View User Interface, yeah that's the best I can do...) is a simple scss based ui kit. I really love other frameworks out there (bulma, angular material, uikit, spectre, etc...), but I prefer one that style directly the dom, without the clutter of wrapping them on a hell of tags (whenever possible obviously).
 
 ## [DEMO](https://kennyrulez.github.io/vui)
 
@@ -10,7 +10,7 @@ Added experimental navigationbar (horizontal only) with the classic hamburger wh
 
 ## Grid system
 As I said, I love [Bulma](https://bulma.io) css framework, so I took from this project it's exceptional grid system.
-It uses flexbox, like other projects ([gridlex](http://gridlex.devlint.fr) is one example, which I used before discovering bulma) and is very simple in it's basic flow. On advanced scenarios, it uses an intelligent naming system for classes to keep your code readable, so if in the future you will switch to another css framework, you can easily remeber your design choices and move without almost any pain.
+It uses flexbox, like other projects ([gridlex](http://gridlex.devlint.fr) is one example, which I used before discovering bulma) and is very simple in it's basic flow. On advanced scenarios, it uses an intelligent naming system for classes to keep your code readable, so if in the future you will switch to another css framework, you can easily remember your design choices and move without almost any pain.
 Please refer to bulma's documentation on columns system on https://bulma.io/documentation/columns/basics/.
 
 ## Normalize
