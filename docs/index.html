@@ -6,15 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+    <title>VUI Demo</title>
+
     <link rel="stylesheet" href="vui.css">
 </head>
 
 <body>
-    <div style="padding:2%">
+    <div style="padding:1%">
         <h1>VUI: a dead simple (S)CSS ui kit</h1>
-        For the grid sistem please refer to this link: <a href="https://bulma.io/documentation/columns/basics/" target="_blank">https://bulma.io/documentation/columns/basics/</a>
+        For the grid sistem please refer to this link:
+        <a href="https://bulma.io/documentation/columns/basics/" target="_blank">https://bulma.io/documentation/columns/basics/</a>
         <br/>
         <br/>
+
+        <h2>Experimental 2018 features</h2>
+        <h3>Navigation bar</h3>
+        <nav role="navigation">
+            <input type="checkbox" id="hamburger" />
+            <label for="hamburger">☰</label>
+            <ul>
+                <li>
+                    <a href="javascript:;">Home</a>
+                </li>
+                <li>
+                    <a href="javascript:;">About</a>
+                </li>
+                <li class="container">
+                    <a href="javascript:;">Services</a>
+                    <ul>
+                        <li>
+                            <a href="javascript:;">Plumbing</a>
+                        </li>
+                        <li class="container">
+                            <a href="javascript:;">Heating</a>
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">Residential</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Commercial</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Industrial</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">Electrical</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">Pricing</a>
+                </li>
+                <li>
+                    <a href="javascript:;">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+
+        <br />
+        <br />
+        <hr />
+        <br />
+        <br />
 
         <a href="javascript:;">Defines a hyperlink</a>
         <br/>
@@ -161,10 +216,7 @@
             <input type="submit" class="warning" value="Save" />
             <input type="button" value="Reset" />
         </form>
-        <br/>
-        <br/>
 
-        </form>
         <br/>
         <br/>
         <h1>Defines HTML headings</h1>

@@ -1,13 +1,21 @@
 // fonts
 $body-font:             sans-serif;
 $body-line-height:      1.2;
-$body-font-weight:      300;
+$body-font-weight:      400;
 $heading-font:          serif;
 $heading-line-height:   1.4;
 $heading-font-weight:   500;
 
+// responsivness
+$mobile:                35.5em;
+$tablet:                64em;
+
+// navigationbar
+$nav-border-line:       1px;
+$nav-border-color:      #CDCDCD;
+$arrow-color:           '%23e67e22'; // arrow is svg, so you need to encode # with %23
+
 // color palette
-$body-background-color: #ffffff; 
 $font-color:            #333333;
 
 $accent:                #2ca8ff;

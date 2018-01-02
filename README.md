@@ -5,6 +5,9 @@ VUI (View User Interface, yeah that's the best I can do...) is a simple scss bas
 
 ## [DEMO](https://kennyrulez.github.io/vui)
 
+#2018 Update
+Added experimental navigationbar (horizontal only) with the classic hamburger when in mobile.
+
 ## Grid system
 As I said, I love [Bulma](https://bulma.io) css framework, so I took from this project it's exceptional grid system.
 It uses flexbox, like other projects ([gridlex](http://gridlex.devlint.fr) is one example, which I used before discovering bulma) and is very simple in it's basic flow. On advanced scenarios, it uses an intelligent naming system for classes to keep your code readable, so if in the future you will switch to another css framework, you can easily remeber your design choices and move without almost any pain.
@@ -30,14 +33,13 @@ to reference the scss version. Don't forget to compile!
 
 # Variables
 | Name                      | Description                   | Default       |
-| --------------------------|------------------------------- | -------------:|
+| --------------------------|------------------------------ | -------------:|
 | $body-font                | font family for body          | sans-serif    |
 | $body-line-height         | default line height for body  | 1.2           |
 | $body-font-weight         | body font weight              | 300           |
 | $heading-font             | heading (h1,h2...) font       | serif         |
 | $heading-line-height      | heading line height           | 1.4           |
 | $heading-font-weight      | heading font weight           | 500           |
-| $body-background-color:   | body background color         | #ffffff       |
 | $font-color:              | default font color            | #333333       |
 | $accent:                  | highlight color               | #2ca8ff       |
 | $green:                   | green color (buttons, alert)  | #2ecc71       |
@@ -45,6 +47,19 @@ to reference the scss version. Don't forget to compile!
 | $orange:                  | orange color (buttons, alert) | #e67e22       |
 | $red:                     | red color (buttons, alert)    | #cf2b1a       |
 | $gray:                    | gray color (ui)               | CDCDCD        |
+
+### Responsiveness breaks
+| Name                      | Description                   | Default       |
+| --------------------------|------------------------------ | -------------:|
+| $mobile                   | when MQ breaks on mobile      | 35.5em        |
+| $tablet                   | when MQ breaks on tablet      | 64em          |
+
+### Variables for experimental features
+| Name                      | Description                           | Default       |
+| --------------------------|-------------------------------------- | -------------:|
+| $nav-border-line          | navigationbar container border width  | 1px           |
+| $nav-border-color         | navigationbar container border color  | 64em          |
+| $arrow-color              | dropdown arrow color                  | 64em          |
 
 ## Documentation
 
@@ -61,4 +76,4 @@ Fork the project and do your code! Then open a pull request. Please avoid to PR 
 [Pure CSS Fancy Checkbox/Radio by Raúl Barrera](https://codepen.io/raubaca/pen/ONzBxP)
 
 ## License
-Code 2017 Valerio Fornito. Code released under [the MIT license](https://github.com/kennyrulez/vui/blob/master/LICENSE).
+Code 2017/2018 Valerio Fornito. Code released under [the MIT license](https://github.com/kennyrulez/vui/blob/master/LICENSE).
