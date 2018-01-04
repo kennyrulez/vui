@@ -59,7 +59,10 @@ to reference the scss version. Don't forget to compile!
 | --------------------------|-------------------------------------- | -------------:|
 | $nav-border-line          | navigationbar container border width  | 1px           |
 | $nav-border-color         | navigationbar container border color  | 64em          |
-| $arrow-color              | dropdown arrow color                  | 64em          |
+| $nav-arrow-color          | dropdown arrow color                  | 64em          |
+| $nav-hover-color          | color when hovering items             | #2ecc71       |
+| $nav-hover-color          | color when hovering items             | #2ecc71       |
+| $nav-text-hover-color     | items text color when hovering        | #fff          |
 
 ## Documentation
 
