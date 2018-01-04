@@ -27,11 +27,17 @@ and use it in your project (plain css)
 ```
 or
 ```sh
-./node_modules/vui.scss/src/vui.scss
+./node_modules/vui.scss/src/vui
 ```
 to reference the scss version. Don't forget to compile!
 
 # Variables
+To edit one or more variable, import in your scss
+```sh
+./node_modules/vui.scss/src/_settings
+```
+and redefine one of following variables:
+
 | Name                      | Description                   | Default       |
 | --------------------------|------------------------------ | -------------:|
 | $body-font                | font family for body          | sans-serif    |
