@@ -23,11 +23,11 @@ npm install --save vui.scss
 ```
 and use it in your project (plain css)
 ```sh
-./node_modules/vui/dist/vui.css
+./node_modules/vui.scss/dist/vui.css
 ```
 or
 ```sh
-./node_modules/vui/vui.scss
+./node_modules/vui/src/vui.scss
 ```
 to reference the scss version. Don't forget to compile!
 
