@@ -42,7 +42,7 @@ and redefine one of following variables:
 | --------------------------|------------------------------ | -------------:|
 | $body-font                | font family for body          | sans-serif    |
 | $body-line-height         | default line height for body  | 1.2           |
-| $body-font-weight         | body font weight              | 300           |
+| $body-font-weight         | body font weight              | 400           |
 | $heading-font             | heading (h1,h2...) font       | serif         |
 | $heading-line-height      | heading line height           | 1.4           |
 | $heading-font-weight      | heading font weight           | 500           |
@@ -52,7 +52,7 @@ and redefine one of following variables:
 | $yellow:                  | yellow color (buttons, alert) | #f1c40f       |
 | $orange:                  | orange color (buttons, alert) | #e67e22       |
 | $red:                     | red color (buttons, alert)    | #cf2b1a       |
-| $gray:                    | gray color (ui)               | CDCDCD        |
+| $gray:                    | gray color (ui)               | #cdcdcd       |
 
 ### Responsiveness breaks
 | Name                      | Description                   | Default       |
@@ -61,14 +61,14 @@ and redefine one of following variables:
 | $mq-tablet                | when MQ breaks on tablet      | 64em          |
 
 ### Variables for experimental features
-| Name                      | Description                           | Default       |
-| --------------------------|-------------------------------------- | -------------:|
-| $nav-border-line          | navigationbar container border width  | 1px           |
-| $nav-border-color         | navigationbar container border color  | 64em          |
-| $nav-arrow-color          | dropdown arrow color                  | 64em          |
-| $nav-hover-color          | color when hovering items             | #2ecc71       |
-| $nav-hover-color          | color when hovering items             | #2ecc71       |
-| $nav-text-hover-color     | items text color when hovering        | #fff          |
+| Name                      | Description                            | Default       |
+| --------------------------|----------------------------------------| -------------:|
+| $nav-border-line          | navigation bar container border width  | 1px           |
+| $nav-border-color         | navigation bar container border color  | #cdcdcd       |
+| $nav-arrow-color          | dropdown arrow color (# is %23 for svg)| %23e67e22     |
+| $nav-hover-color          | color when hovering items              | #2ecc71       |
+| $nav-hover-color          | color when hovering items              | #2ecc71       |
+| $nav-text-hover-color     | items text color when hovering         | #fff          |
 
 ## Documentation
 
