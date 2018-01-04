@@ -27,7 +27,7 @@ and use it in your project (plain css)
 ```
 or
 ```sh
-./node_modules/vui/src/vui.scss
+./node_modules/vui.scss/src/vui.scss
 ```
 to reference the scss version. Don't forget to compile!
 
