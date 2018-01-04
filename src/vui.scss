@@ -7,12 +7,6 @@
 @include normalize();
 
 /*
-Experimental, do not rely on it
-*/
-@import 'navigationbar';
-
-
-/*
     From now on, you can edit these imports.
 */
 // import settings
@@ -20,3 +14,8 @@ Experimental, do not rely on it
 
 // dom elements
 @import "dom";              // HTML DOM elements
+
+/*
+Experimental, do not rely on it
+*/
+@import 'navigationbar';
