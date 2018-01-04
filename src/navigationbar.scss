@@ -14,7 +14,7 @@ nav[role=navigation] {
     & + label {
       display: none;
 
-      @media screen and (max-width: $mobile) {
+      @media screen and (max-width: $mq-mobile) {
         clear: both;
         display: block;
         text-align: center;
@@ -35,7 +35,7 @@ nav[role=navigation] {
     display: none;
     flex-direction: column;
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mq-mobile) {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -49,7 +49,7 @@ nav[role=navigation] {
       padding: 0;
       list-style-type: none;
 
-      @media screen and (min-width: $mobile) {
+      @media screen and (min-width: $mq-mobile) {
         height: 100%;
       }
 
@@ -67,7 +67,7 @@ nav[role=navigation] {
           padding-left: 2rem;
           background: $nav-hover-color;
 
-          @media screen and (min-width: $mobile) {
+          @media screen and (min-width: $mq-mobile) {
             padding-left: 0;
             color: $nav-text-hover-color;
 
@@ -91,7 +91,7 @@ nav[role=navigation] {
         color: $nav-text-color;
         padding: 1rem;
 
-        @media screen and (min-width: $mobile) {
+        @media screen and (min-width: $mq-mobile) {
           width: 100%;
           height: 100%;
           display: flex;
@@ -107,13 +107,13 @@ nav[role=navigation] {
       height: auto;
       width: auto;
 
-      @media screen and (min-width: $mobile) {
+      @media screen and (min-width: $mq-mobile) {
         position: absolute;
       }
 
       // 3° level items
       ul {
-        @media screen and (min-width: $mobile) {
+        @media screen and (min-width: $mq-mobile) {
           margin: 0 0 0 100%;
         }
       }

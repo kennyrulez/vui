@@ -57,8 +57,8 @@ and redefine one of following variables:
 ### Responsiveness breaks
 | Name                      | Description                   | Default       |
 | --------------------------|------------------------------ | -------------:|
-| $mobile                   | when MQ breaks on mobile      | 35.5em        |
-| $tablet                   | when MQ breaks on tablet      | 64em          |
+| $mq-mobile                | when MQ breaks on mobile      | 35.5em        |
+| $mq-tablet                | when MQ breaks on tablet      | 64em          |
 
 ### Variables for experimental features
 | Name                      | Description                           | Default       |
