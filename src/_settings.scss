@@ -13,7 +13,11 @@ $tablet:                64em;
 // navigationbar
 $nav-border-line:       1px;
 $nav-border-color:      #CDCDCD;
-$arrow-color:           '%23e67e22'; // arrow is svg, so you need to encode # with %23
+$nav-arrow-color:       '%23e67e22'; // arrow is svg, so you need to encode # with %23
+$nav-hover-color:       #2ecc71;
+$nav-text-color:        #2ca8ff;
+$nav-text-hover-color:  #fff;
+
 
 // color palette
 $font-color:            #333333;
