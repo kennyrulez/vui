@@ -1,34 +1,44 @@
 // fonts
-$body-font:             sans-serif !default;
-$body-line-height:      1.2 !default;
-$body-font-weight:      400 !default;
-$heading-font:          serif !default;
-$heading-line-height:   1.4 !default;
-$heading-font-weight:   500 !default;
+$body-font:                     sans-serif !default;
+$body-line-height:              1.2 !default;
+$body-font-weight:              400 !default;
+$heading-font:                  serif !default;
+$heading-line-height:           1.4 !default;
+$heading-font-weight:           500 !default;
 
 // responsivness
-$mq-mobile:             35.5em !default;
-$mq-tablet:             64em !default;
+$mq-mobile:                     35.5em !default;
+$mq-tablet:                     64em !default;
 
 // navigationbar
-$nav-border-line:       1px !default;
-$nav-border-color:      #cdcdcd !default;
-$nav-arrow-color:       '%23e67e22' !default; // arrow is svg, so you need to encode # with %23
-$nav-hover-color:       #2ecc71 !default;
-$nav-text-color:        #2ca8ff !default;
-$nav-text-hover-color:  #fff !default;
+$nav-border-line:               1px !default;
+$nav-border-color:              #cdcdcd !default;
+$nav-arrow-color:               '%23e67e22' !default; // arrow is svg, so you need to encode # with %23
+$nav-hover-color:               #2ecc71 !default;
+$nav-text-color:                #2ca8ff !default;
+$nav-text-hover-color:          #fff !default;
 
+// notification
+$notification-font-size:        .85em;
+$notification-width:            30% !default;
+$notification-offset-top:       10px !default;
+$notification-offset-right:     10px !default;
+$notification-offset-left:      auto !default;
+$notification-offset-bottom:    auto !default;
+$notification-border-radius:    10px !default;
+$notification-transition:       .8s ease-in-out !default;
+$notification-default-color:    #cdcdcd !default;
 
 // color palette
-$font-color:            #333333 !default;
+$font-color:                    #333333 !default;
 
-$accent:                #2ca8ff !default;
+$accent:                        #2ca8ff !default;
 
-$green:                 #2ecc71 !default;
-$yellow:                #f1c40f !default;
-$orange:                #e67e22 !default;
-$red:                   #cf2b1a !default;
-$gray:                  #cdcdcd !default;
+$green:                         #2ecc71 !default;
+$yellow:                        #f1c40f !default;
+$orange:                        #e67e22 !default;
+$red:                           #cf2b1a !default;
+$gray:                          #cdcdcd !default;
 
 // button color palette: [key = name, value = array] of background-color and font color
 $button-palette: (

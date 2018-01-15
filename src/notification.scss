@@ -1,0 +1,69 @@
+@import '_settings';
+
+.notification-container {
+  position: absolute;
+  display: flex;
+  width: $notification-width;
+  height: 0;
+  top: $notification-offset-top;
+  right: $notification-offset-right;
+  left: $notification-offset-left;
+  bottom: $notification-offset-bottom;
+  border-radius: $notification-border-radius;
+  transition: opacity $notification-transition;
+  opacity: 0;
+  overflow: hidden;
+
+  @each $key, $value in $button-palette {
+    $bgcolor: nth($value, 1);
+    $fontcolor: nth($value, 2);
+
+    &.#{$key} {
+      background-color: $bgcolor;
+      color: $fontcolor;
+
+      &:hover,
+      &:focus {
+        background-color: darken($bgcolor, 20%);
+      }
+
+      .notification-close {
+        border-left-color: $fontcolor !important;
+        color: $fontcolor !important;
+      }
+    }
+  }
+
+  &.show {
+    display: flex;
+    opacity: 1;
+    height: auto;
+    min-height: 10%;
+    border: 1px solid $notification-default-color;
+  }
+
+  .notification-body {
+    flex: 1;
+    padding: .6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $notification-font-size;
+  }
+
+  .notification-close {
+    flex: 0 0 10%;
+    border-left: 1px solid $notification-default-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 24px/100% arial, sans-serif;
+    color: $notification-default-color;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+
+    &::after {
+      content: '✖'; /* UTF-8 symbol */
+    }
+  }
+}
