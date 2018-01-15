@@ -12,6 +12,13 @@
 </head>
 
 <body>
+    <div id="notification" class="notification-container warning">
+        <div class="notification-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus cursus molestie ligula, in dignissim sem gravida nec. Duis eu mi a tellus viverra dapibus. Curabitur dictum, sapien et blandit volutpat, nulla justo tempor tellus, id iaculis nulla eros a ligula. Nunc ultrices lacus eu velit placerat rhoncus. Sed fermentum porttitor orci a varius. Phasellus ac enim maximus, ornare nisl a, elementum risus. Donec condimentum vel odio at laoreet. Curabitur vitae lectus venenatis, lobortis magna in, pharetra neque. Nullam congue quis metus ac porttitor. Donec quis augue condimentum nulla ultricies sodales sed ac ante. Nunc et odio tincidunt, laoreet lectus eget, consectetur massa. Nam augue eros, bibendum ut imperdiet non, facilisis molestie velit. Suspendisse eu dapibus metus. Maecenas sollicitudin suscipit velit, sed venenatis odio porta dignissim. Mauris nisi urna, elementum efficitur mollis a, rhoncus id quam. 
+        </div>
+        <a href="javascript:;" class="notification-close" onclick="closeNotification()"></a>
+    </div>
+
     <div style="padding:1%">
         <h1>VUI: a dead simple (S)CSS ui kit</h1>
         For the grid sistem please refer to this link:
@@ -20,6 +27,25 @@
         <br/>
 
         <h2>Experimental 2018 features</h2>
+        <h3>Notification</h3>
+        <a class="behave-as-button info" href="javascript:;" onclick="toggleNotification()">Toggle notification</a>
+        <script>
+            function toggleNotification() {
+                var notification = document.getElementById('notification');
+                notification.classList.toggle('show');
+            }
+            function closeNotification() {
+                var notification = document.getElementById('notification');
+                notification.classList.remove('show');
+            }
+        </script>
+
+
+        <br/>
+        <br/>
+        <hr/>
+        <br/>
+
         <h3>Navigation bar</h3>
         <nav role="navigation">
             <input type="checkbox" id="hamburger" />

@@ -6,7 +6,11 @@ VUI (View User Interface, yeah that's the best I can do...) is a simple scss bas
 ## [DEMO](https://kennyrulez.github.io/vui)
 
 # 2018 Update
+## 0.3.2
 Added experimental navigationbar (horizontal only) with the classic hamburger when in mobile.
+
+## 0.3.3
+Added experimental notification popup with css transition. I've included a simple javascript to show/hide the popup. Use your own in your project.
 
 ## Grid system
 As I said, I love [Bulma](https://bulma.io) css framework, so I took from this project it's exceptional grid system.
@@ -61,6 +65,7 @@ and redefine one of following variables:
 | $mq-tablet                | when MQ breaks on tablet      | 64em          |
 
 ### Variables for experimental features
+#### Navigation bar
 | Name                      | Description                            | Default       |
 | --------------------------|----------------------------------------| -------------:|
 | $nav-border-line          | navigation bar container border width  | 1px           |
@@ -69,6 +74,19 @@ and redefine one of following variables:
 | $nav-hover-color          | color when hovering items              | #2ecc71       |
 | $nav-hover-color          | color when hovering items              | #2ecc71       |
 | $nav-text-hover-color     | items text color when hovering         | #fff          |
+
+#### Notification
+| Name                          | Description               | Default           |
+| ------------------------------|---------------------------| -----------------:|
+| $notification-font-size       | font size                 | .85em             |
+| $notification-width           | width of the notification | 30%               |
+| $notification-offset-top      | offset (margin) top       | 10px              |
+| $notification-offset-right    | offset (margin) right     | 10px              |
+| $notification-offset-left     | offset (margin) left      | auto              |
+| $notification-offset-bottom   | offset (margin) bottom    | auto              |
+| $notification-border-radius   | container border radius   | 10px              |
+| $notification-transition      | appear transition         | .8s ease-in-out   |
+| $notification-default-color   | default color             | #cdcdcd           |
 
 ## Documentation
 
