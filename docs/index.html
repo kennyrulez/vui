@@ -14,7 +14,15 @@
 <body>
     <div id="notification" class="notification-container warning">
         <div class="notification-body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus cursus molestie ligula, in dignissim sem gravida nec. Duis eu mi a tellus viverra dapibus. Curabitur dictum, sapien et blandit volutpat, nulla justo tempor tellus, id iaculis nulla eros a ligula. Nunc ultrices lacus eu velit placerat rhoncus. Sed fermentum porttitor orci a varius. Phasellus ac enim maximus, ornare nisl a, elementum risus. Donec condimentum vel odio at laoreet. Curabitur vitae lectus venenatis, lobortis magna in, pharetra neque. Nullam congue quis metus ac porttitor. Donec quis augue condimentum nulla ultricies sodales sed ac ante. Nunc et odio tincidunt, laoreet lectus eget, consectetur massa. Nam augue eros, bibendum ut imperdiet non, facilisis molestie velit. Suspendisse eu dapibus metus. Maecenas sollicitudin suscipit velit, sed venenatis odio porta dignissim. Mauris nisi urna, elementum efficitur mollis a, rhoncus id quam. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus cursus molestie ligula, in dignissim sem gravida nec. Duis
+            eu mi a tellus viverra dapibus. Curabitur dictum, sapien et blandit volutpat, nulla justo tempor tellus, id iaculis
+            nulla eros a ligula. Nunc ultrices lacus eu velit placerat rhoncus. Sed fermentum porttitor orci a varius. Phasellus
+            ac enim maximus, ornare nisl a, elementum risus. Donec condimentum vel odio at laoreet. Curabitur vitae lectus
+            venenatis, lobortis magna in, pharetra neque. Nullam congue quis metus ac porttitor. Donec quis augue condimentum
+            nulla ultricies sodales sed ac ante. Nunc et odio tincidunt, laoreet lectus eget, consectetur massa. Nam augue
+            eros, bibendum ut imperdiet non, facilisis molestie velit. Suspendisse eu dapibus metus. Maecenas sollicitudin
+            suscipit velit, sed venenatis odio porta dignissim. Mauris nisi urna, elementum efficitur mollis a, rhoncus id
+            quam.
         </div>
         <a href="javascript:;" class="notification-close" onclick="closeNotification()"></a>
     </div>
@@ -179,7 +187,6 @@
         <br/>
         <br/>
 
-
         <figure>
             <img src="http://via.placeholder.com/350x150" alt="" title="" />
             <figcaption>Defines a caption for a figure element</figcaption>
@@ -190,14 +197,17 @@
         <form>
             <fieldset>
                 <legend>Form with legend</legend>
-                <label>Input 1</label>
+                <label>Standard input</label>
                 <input />
-                <label>Input 2</label>
-                <input class="error" />
+                <label>Valid Input</label>
+                <input class="valid" />
+                <label>Input with error</label>
+                <input class="invalid" />
+                <small>Input is invalid</small>
                 <label>Input disabled</label>
                 <input disabled />
-                <label>Input 3</label>
-                <input />
+                <label>Input read only</label>
+                <input readonly />
                 <label>Select</label>
                 <select>
                     <optgroup label="numbers">

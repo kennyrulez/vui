@@ -75,10 +75,16 @@ input[type=submit],
   padding: 0.75em 1.75em;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
     background-color: darken($gray, 20%);
     color: #fff;
+  }
+
+  &:disabled {
+    background-color: $gray;
+    color: lighten($gray, 40%);
+    cursor: not-allowed;
   }
 
   @each $key, $value in $button-palette {
@@ -89,9 +95,15 @@ input[type=submit],
       background-color: $bgcolor;
       color: $fontcolor;
 
-      &:hover,
-      &:focus {
+      &:hover:not(:disabled),
+      &:focus:not(:disabled) {
         background-color: darken($bgcolor, 20%);
+      }
+
+      &:disabled {
+        background-color: $gray;
+        color: lighten($gray, 40%);
+        cursor: not-allowed;
       }
     }
   }
@@ -144,6 +156,8 @@ form {
     display: flex;
     flex-direction: column;
     border: none;
+    margin: 0;
+    padding: 0;
 
     legend {
       font-family: $heading-font;
@@ -165,29 +179,64 @@ form {
     width: 100%;
     padding: 1em !important;
     margin-bottom: .8em;
-    border-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
   }
 
   input:not([type=submit]):not([type=button]):not([type=file]):not([type=checkbox]):not([type=radio]),
   textarea {
     border-color: $gray;
     font-weight: 400;
-    border: 1px solid $gray;
+    border: none;
+    background-color: lighten($gray, 18%);
     border-bottom: 3px solid darken($gray, 30%);
 
     &:focus {
-      border-color: darken($gray, 40%);
+      border-bottom-color: darken($gray, 60%);
       outline: none;
     }
 
+    &.valid {
+      border-bottom-color: $green;
+    }
+
     &:disabled {
-      border-color: lighten($gray, 40%);
+      border-color: lighten($gray, 5%);
+      cursor: not-allowed;
+    }
+
+    &:read-only {
+      border: none;
+      background-color: darken($gray, 10%);
+      cursor: not-allowed;
+    }
+
+    &:-moz-read-only {
+      border: none;
+      background-color: darken($gray, 10%);
       cursor: not-allowed;
     }
 
     &.error {
-      border: 1px solid $red;
-      border-bottom: 3px solid $red;
+      border-bottom-color: $red;
+
+      &:not(:only-child) {
+        margin-bottom: 0;
+      }
+
+      & + small {
+        display: block;
+        font-style: italic;
+        padding: .3em .5em;
+        width: 100% !important;
+        color: #fff;
+        font-weight: bold;
+        padding-left: 1em;
+        background-color: lighten($red, 20%);
+        margin-bottom: .7em;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
     }
   }
 
@@ -216,6 +265,19 @@ form {
 
     &::-ms-expand {
       display: none;
+    }
+
+    &.valid {
+      border-bottom-color: $green;
+    }
+
+    &:disabled {
+      border-color: lighten($gray, 5%);
+      cursor: not-allowed;
+    }
+
+    &.error {
+      border-bottom-color: $red;
     }
   }
 
@@ -253,7 +315,6 @@ form {
         height: 24px;
         border: 2px solid $accent;
         border-radius: 4px;
-        z-index: -1;
         transition: .25s all ease;
       }
     }
@@ -268,13 +329,11 @@ form {
     input[type=checkbox] {
       &:checked + label {
         padding-left: 10px;
-        color: #fff;
 
         &::before {
           top: 0;
           width: 100%;
           height: 100%;
-          background: $accent;
         }
       }
     }
@@ -331,6 +390,7 @@ ul {
     border-left: 3px solid $gray;
     margin-bottom: .3%;
     padding: .3% 1%;
+    line-height: 1.5em;
 
     ul,
     ol {
@@ -352,6 +412,7 @@ ol {
     counter-increment: step-counter;
     margin-bottom: .3em;
     padding: .3% 1%;
+    line-height: 1.5em;
 
     ul,
     ol {
