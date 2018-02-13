@@ -12,6 +12,10 @@ Added experimental navigationbar (horizontal only) with the classic hamburger wh
 ## 0.3.3
 Added experimental notification popup with css transition. I've included a simple javascript to show/hide the popup. Use your own in your project.
 
+## 0.3.5
+(yeah, 0.3.4 was a refining release, not enough to have a description)
+Added responsive table, with some quirks. Thanks StackOverflow for pointing me in the right directions using `data-` html attributes.
+
 ## Grid system
 As I said, I love [Bulma](https://bulma.io) css framework, so I took from this project it's exceptional grid system.
 It uses flexbox, like other projects ([gridlex](http://gridlex.devlint.fr) is one example, which I used before discovering bulma) and is very simple in it's basic flow. On advanced scenarios, it uses an intelligent naming system for classes to keep your code readable, so if in the future you will switch to another css framework, you can easily remember your design choices and move without almost any pain.
