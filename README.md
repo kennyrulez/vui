@@ -69,6 +69,7 @@ and redefine one of following variables:
 
 ### Responsiveness breaks
 changed in 0.4.0
+
 | Name                      | Description                           | Default       |
 | --------------------------|-------------------------------------- | -------------:|
 | $mq-568                   | when MQ breaks on mobile              | 35.5em        |
