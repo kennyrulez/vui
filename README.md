@@ -9,7 +9,7 @@ VUI (View User Interface, yeah that's the best I can do...) is a simple scss bas
 ## 0.4.0
 Some tweaks for notification bar: now the position is fixed, so even if you scroll the bar remain visibile. 
 Now it views better on mobile, and has some new MQ on other screen resolutions.
-**ATTENTION**: I renamed the Media Queries `mq-mobile` and `mq-tablet` to new names, so this changes will break compilation if your project use these varabiles. Please adjust accordingly (View 'Variables' later in this document).
+**ATTENTION**: I renamed the Media Queries `mq-mobile` and `mq-tablet` to new names, so these changes will break compilation if your project use these varabiles. Please adjust accordingly (View 'Variables' later in this document).
 
 ## 0.3.5
 (yeah, 0.3.4 was a refining release, not enough to have a description)
