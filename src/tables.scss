@@ -55,7 +55,7 @@ table {
   &.responsive {
     thead,
     th {
-      @media (max-width: $mq-mobile) {
+      @media (max-width: $mq-568) {
         display: none;
       }
     }
@@ -75,7 +75,7 @@ table {
         content: attr(data-th)": ";
         font-weight: bold;
 
-        @media (min-width: $mq-mobile) {
+        @media (min-width: $mq-568) {
           display: none;
         }
       }
@@ -85,7 +85,7 @@ table {
     td {
       text-align: left;
 
-      @media (min-width: $mq-mobile) {
+      @media (min-width: $mq-568) {
         display: table-cell;
         padding: .25em .5em;
 

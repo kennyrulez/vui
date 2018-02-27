@@ -1,7 +1,7 @@
 @import '_settings';
 
 .notification-container {
-  position: absolute;
+  position: fixed;
   display: flex;
   width: $notification-width;
   height: 0;
@@ -13,6 +13,22 @@
   transition: opacity $notification-transition;
   opacity: 0;
   overflow: hidden;
+
+  @media (min-width: $mq-768) and (max-width: $mq-1280) {
+    width: $notification-width-laptop;
+  }
+
+  @media (min-width: $mq-568) and (max-width: $mq-768) {
+    width: $notification-width-tablet;
+  }
+
+  @media (max-width: $mq-568) {
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+  }
 
   @each $key, $value in $button-palette {
     $bgcolor: nth($value, 1);
