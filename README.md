@@ -6,15 +6,20 @@ VUI (View User Interface, yeah that's the best I can do...) is a simple scss bas
 ## [DEMO](https://kennyrulez.github.io/vui)
 
 # 2018 Update
-## 0.3.2
-Added experimental navigationbar (horizontal only) with the classic hamburger when in mobile.
-
-## 0.3.3
-Added experimental notification popup with css transition. I've included a simple javascript to show/hide the popup. Use your own in your project.
+## 0.4.0
+Some tweaks for notification bar: now the position is fixed, so even if you scroll the bar remain visibile. 
+Now it views better on mobile, and has some new MQ on other screen resolutions.
+**ATTENTION**: I renamed the Media Queries `mq-mobile` and `mq-tablet` to new names, so this changes will break compilation if your project use these varabiles. Please adjust accordingly (View 'Variables' later in this document).
 
 ## 0.3.5
 (yeah, 0.3.4 was a refining release, not enough to have a description)
 Added responsive table, with some quirks. Thanks StackOverflow for pointing me in the right directions using `data-` html attributes.
+
+## 0.3.3
+Added experimental notification popup with css transition. I've included a simple javascript to show/hide the popup. Use your own in your project.
+
+## 0.3.2
+Added experimental navigationbar (horizontal only) with the classic hamburger when in mobile.
 
 ## Grid system
 As I said, I love [Bulma](https://bulma.io) css framework, so I took from this project it's exceptional grid system.
@@ -63,10 +68,13 @@ and redefine one of following variables:
 | $gray:                    | gray color (ui)               | #cdcdcd       |
 
 ### Responsiveness breaks
-| Name                      | Description                   | Default       |
-| --------------------------|------------------------------ | -------------:|
-| $mq-mobile                | when MQ breaks on mobile      | 35.5em        |
-| $mq-tablet                | when MQ breaks on tablet      | 64em          |
+changed in 0.4.0
+| Name                      | Description                           | Default       |
+| --------------------------|-------------------------------------- | -------------:|
+| $mq-568                   | when MQ breaks on mobile              | 35.5em        |
+| $mq-768                   | when MQ breaks on tablet (landscape)  | 35.5em        |
+| $mq-1024                  | when MQ breaks on tablet              | 64em          |
+| $mq-1280                  | when MQ breaks on laptop              | 80em          |
 
 ### Variables for experimental features
 #### Navigation bar
@@ -76,21 +84,23 @@ and redefine one of following variables:
 | $nav-border-color         | navigation bar container border color  | #cdcdcd       |
 | $nav-arrow-color          | dropdown arrow color (# is %23 for svg)| %23e67e22     |
 | $nav-hover-color          | color when hovering items              | #2ecc71       |
-| $nav-hover-color          | color when hovering items              | #2ecc71       |
+| $nav-text-color           | items text color                       | #2ca8ff       |
 | $nav-text-hover-color     | items text color when hovering         | #fff          |
 
 #### Notification
-| Name                          | Description               | Default           |
-| ------------------------------|---------------------------| -----------------:|
-| $notification-font-size       | font size                 | .85em             |
-| $notification-width           | width of the notification | 30%               |
-| $notification-offset-top      | offset (margin) top       | 10px              |
-| $notification-offset-right    | offset (margin) right     | 10px              |
-| $notification-offset-left     | offset (margin) left      | auto              |
-| $notification-offset-bottom   | offset (margin) bottom    | auto              |
-| $notification-border-radius   | container border radius   | 10px              |
-| $notification-transition      | appear transition         | .8s ease-in-out   |
-| $notification-default-color   | default color             | #cdcdcd           |
+| Name                          | Description                                   | Default           |
+| ------------------------------|-----------------------------------------------| -----------------:|
+| $notification-font-size       | font size                                     | .85em             |
+| $notification-width           | width of the notification                     | 30%               |
+| $notification-width-tablet    | width of the notification in tablet mode      | 70%               |
+| $notification-width           | width of the notification in latpop mode      | 30%               |
+| $notification-offset-top      | offset (margin) top                           | 10px              |
+| $notification-offset-right    | offset (margin) right                         | 10px              |
+| $notification-offset-left     | offset (margin) left                          | auto              |
+| $notification-offset-bottom   | offset (margin) bottom                        | auto              |
+| $notification-border-radius   | container border radius                       | 10px              |
+| $notification-transition      | appear transition                             | .8s ease-in-out   |
+| $notification-default-color   | default color                                 | #cdcdcd           |
 
 ## Documentation
 
