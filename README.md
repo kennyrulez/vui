@@ -6,6 +6,9 @@ VUI (View User Interface, yeah that's the best I can do...) is a simple scss bas
 ## [DEMO](https://kennyrulez.github.io/vui)
 
 # 2018 Update
+## 0.4.1
+Small bug fixes
+
 ## 0.4.0
 Some tweaks for notification bar: now the position is fixed, so even if you scroll the bar remain visibile. 
 Now it views better on mobile, and has some new MQ on other screen resolutions.

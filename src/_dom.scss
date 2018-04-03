@@ -348,7 +348,7 @@ h5,
 h6 {
   font-family: $heading-font;
   line-height: $heading-line-height;
-  font-weight: 500;
+  font-weight: $heading-font-weight;
   margin: 0;
   margin-bottom: 1%;
 }
