@@ -4,34 +4,73 @@
 //  https://github.com/jgthms/bulma/blob/master/sass/utilities/mixins.sass
 
 // The container horizontal gap, which acts as the offset for breakpoints
-$gap: 32px !default
+$gap: 64px !default
 // 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
-$tablet: 769px !default
+$tablet: 769px !default// Flags
+
+$variable-columns: true !default
 // 960px container + 4rem
 $desktop: 960px + (2 * $gap) !default
 // 1152px container + 4rem
 $widescreen: 1152px + (2 * $gap) !default
+$widescreen-enabled: true !default
 // 1344px container + 4rem
 $fullhd: 1344px + (2 * $gap) !default
+$fullhd-enabled: true !default
+
+// Flags
+
+$variable-columns: true !default
 
 =mobile
   @media screen and (max-width: $tablet - 1px)
     @content
+
 =tablet
   @media screen and (min-width: $tablet), print
     @content
+
+=tablet-only
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px)
+    @content
+
 =touch
   @media screen and (max-width: $desktop - 1px)
     @content
+
 =desktop
   @media screen and (min-width: $desktop)
     @content
+
+=desktop-only
+  @if $widescreen-enabled
+    @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px)
+      @content
+
+=until-widescreen
+  @if $widescreen-enabled
+    @media screen and (max-width: $widescreen - 1px)
+      @content
+
 =widescreen
-  @media screen and (min-width: $widescreen)
-    @content
+  @if $widescreen-enabled
+    @media screen and (min-width: $widescreen)
+      @content
+
+=widescreen-only
+  @if $widescreen-enabled and $fullhd-enabled
+    @media screen and (min-width: $widescreen) and (max-width: $fullhd - 1px)
+      @content
+
+=until-fullhd
+  @if $fullhd-enabled
+    @media screen and (max-width: $fullhd - 1px)
+      @content
+
 =fullhd
-  @media screen and (min-width: $fullhd)
-    @content
+  @if $fullhd-enabled
+    @media screen and (min-width: $fullhd)
+      @content
 
 $column-gap: 0.75rem !default
 
@@ -98,9 +137,9 @@ $column-gap: 0.75rem !default
   @for $i from 1 through 12
     .columns.is-mobile > &.is-#{$i}
       flex: none
-      width: ($i / 12) * 100%
+      width: percentage($i / 12)
     .columns.is-mobile > &.is-offset-#{$i}
-      margin-left: ($i / 12) * 100%
+      margin-left: percentage($i / 12)
   +mobile
     &.is-narrow-mobile
       flex: none
@@ -155,9 +194,9 @@ $column-gap: 0.75rem !default
     @for $i from 1 through 12
       &.is-#{$i}-mobile
         flex: none
-        width: ($i / 12) * 100%
+        width: percentage($i / 12)
       &.is-offset-#{$i}-mobile
-        margin-left: ($i / 12) * 100%
+        margin-left: percentage($i / 12)
   +tablet
     &.is-narrow,
     &.is-narrow-tablet
@@ -233,10 +272,10 @@ $column-gap: 0.75rem !default
       &.is-#{$i},
       &.is-#{$i}-tablet
         flex: none
-        width: ($i / 12) * 100%
+        width: percentage($i / 12)
       &.is-offset-#{$i},
       &.is-offset-#{$i}-tablet
-        margin-left: ($i / 12) * 100%
+        margin-left: percentage($i / 12)
   +touch
     &.is-narrow-touch
       flex: none
@@ -291,9 +330,9 @@ $column-gap: 0.75rem !default
     @for $i from 1 through 12
       &.is-#{$i}-touch
         flex: none
-        width: ($i / 12) * 100%
+        width: percentage($i / 12)
       &.is-offset-#{$i}-touch
-        margin-left: ($i / 12) * 100%
+        margin-left: percentage($i / 12)
   +desktop
     &.is-narrow-desktop
       flex: none
@@ -348,9 +387,9 @@ $column-gap: 0.75rem !default
     @for $i from 1 through 12
       &.is-#{$i}-desktop
         flex: none
-        width: ($i / 12) * 100%
+        width: percentage($i / 12)
       &.is-offset-#{$i}-desktop
-        margin-left: ($i / 12) * 100%
+        margin-left: percentage($i / 12)
   +widescreen
     &.is-narrow-widescreen
       flex: none
@@ -405,9 +444,9 @@ $column-gap: 0.75rem !default
     @for $i from 1 through 12
       &.is-#{$i}-widescreen
         flex: none
-        width: ($i / 12) * 100%
+        width: percentage($i / 12)
       &.is-offset-#{$i}-widescreen
-        margin-left: ($i / 12) * 100%
+        margin-left: percentage($i / 12)
   +fullhd
     &.is-narrow-fullhd
       flex: none
@@ -462,9 +501,9 @@ $column-gap: 0.75rem !default
     @for $i from 1 through 12
       &.is-#{$i}-fullhd
         flex: none
-        width: ($i / 12) * 100%
+        width: percentage($i / 12)
       &.is-offset-#{$i}-fullhd
-        margin-left: ($i / 12) * 100%
+        margin-left: percentage($i / 12)
 
 .columns
   margin-left: (-$column-gap)
@@ -503,6 +542,7 @@ $column-gap: 0.75rem !default
     &.is-desktop
       display: flex
 
+@if $variable-columns
   .columns.is-variable
     --columnGap: 0.75rem
     margin-left: calc(-1 * var(--columnGap))

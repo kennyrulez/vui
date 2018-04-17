@@ -6,6 +6,9 @@ VUI (View User Interface, yeah that's the best I can do...) is a simple scss bas
 ## [DEMO](https://kennyrulez.github.io/vui)
 
 # 2018 Update
+## 0.4.2
+Updated Bulma columns to 0.7.0. Please read their [ChangeLog](https://github.com/jgthms/bulma/blob/master/CHANGELOG.md) for up-to-date info about.
+
 ## 0.4.1
 Small bug fixes
 
