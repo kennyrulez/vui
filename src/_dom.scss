@@ -319,6 +319,18 @@ form {
       }
     }
 
+    @each $key, $value in $button-palette {
+      $bordercolor: nth($value, 1);
+
+      &.#{$key} {
+        label {
+          &::before {
+            border-color: $bordercolor;
+          }
+        }
+      }
+    }
+
     input[type=radio] {
       & + label::before {
         border-radius: 18px;

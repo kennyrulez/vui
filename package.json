@@ -1,6 +1,6 @@
 {
   "name": "vui.scss",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "View User Interface: a dead simple (S)CSS ui kit",
   "homepage": "http://kennyrulez.github.io/vui",
   "bugs": {
@@ -12,7 +12,7 @@
   },
   "main": "docs/index.html",
   "scripts": {
-    "build": "node-sass --include-path src src/vui.scss dist/vui.css --output-style compressed",
+    "build": "node-sass --include-path src src/vui.scss dist/vui.css --output-style compressed && cp dist/vui.css docs/vui.css",
     "watch": "nodemon -e scss -x \"npm run build\""
   },
   "author": {

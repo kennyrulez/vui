@@ -15,12 +15,18 @@ table {
     border-bottom: 2px solid $gray;
   }
 
+  tr {
+    display: flex;
+  }
+
   th {
+    flex: 1;
     text-align: left;
     padding: 1% .5%;
   }
 
   td {
+    flex: 1;
     padding: 0.5% .5%;
     border-bottom: 1px solid $gray;
   }
