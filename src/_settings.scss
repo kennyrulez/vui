@@ -25,19 +25,13 @@ $notification-font-size:        .85em;
 $notification-width:            30% !default;
 $notification-width-tablet:     70% !default;
 $notification-width-laptop:     50% !default;
-$notification-offset-top:       10px !default;
-$notification-offset-right:     10px !default;
-$notification-offset-left:      auto !default;
-$notification-offset-bottom:    auto !default;
+$notification-margin:           10px !default;
 $notification-border-radius:    10px !default;
 $notification-transition:       .8s ease-in-out !default;
 $notification-default-color:    #cdcdcd !default;
 
 // color palette
-$font-color:                    #333333 !default;
-
 $accent:                        #2ca8ff !default;
-
 $green:                         #2ecc71 !default;
 $yellow:                        #f1c40f !default;
 $orange:                        #e67e22 !default;

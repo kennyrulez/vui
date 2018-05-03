@@ -14,15 +14,7 @@
 <body>
     <div id="notification" class="notification-container warning">
         <div class="notification-body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus cursus molestie ligula, in dignissim sem gravida nec. Duis
-            eu mi a tellus viverra dapibus. Curabitur dictum, sapien et blandit volutpat, nulla justo tempor tellus, id iaculis
-            nulla eros a ligula. Nunc ultrices lacus eu velit placerat rhoncus. Sed fermentum porttitor orci a varius. Phasellus
-            ac enim maximus, ornare nisl a, elementum risus. Donec condimentum vel odio at laoreet. Curabitur vitae lectus
-            venenatis, lobortis magna in, pharetra neque. Nullam congue quis metus ac porttitor. Donec quis augue condimentum
-            nulla ultricies sodales sed ac ante. Nunc et odio tincidunt, laoreet lectus eget, consectetur massa. Nam augue
-            eros, bibendum ut imperdiet non, facilisis molestie velit. Suspendisse eu dapibus metus. Maecenas sollicitudin
-            suscipit velit, sed venenatis odio porta dignissim. Mauris nisi urna, elementum efficitur mollis a, rhoncus id
-            quam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus cursus molestie ligula, in dignissim sem gravida nec. Duis eu mi a tellus viverra dapibus. Curabitur dictum, sapien et blandit volutpat, nulla justo tempor tellus, id iaculis nulla eros a ligula. Nunc ultrices lacus eu velit placerat rhoncus. Sed fermentum porttitor orci a varius. Phasellus ac enim maximus, ornare nisl a, elementum risus. Donec condimentum vel odio at laoreet. Curabitur vitae lectus venenatis, lobortis magna in, pharetra neque. Nullam congue quis metus ac porttitor. Donec quis augue condimentum nulla ultricies sodales sed ac ante. Nunc et odio tincidunt, laoreet lectus eget, consectetur massa. Nam augue eros, bibendum ut imperdiet non, facilisis molestie velit. Suspendisse eu dapibus metus. Maecenas sollicitudin suscipit velit, sed venenatis odio porta dignissim. Mauris nisi urna, elementum efficitur mollis a, rhoncus id quam.
         </div>
         <a href="javascript:;" class="notification-close" onclick="closeNotification()"></a>
     </div>
@@ -36,15 +28,28 @@
 
         <h2>Experimental 2018 features</h2>
         <h3>Notification</h3>
+        Place notification in:
+        <select id="verticalPlacement">
+            <option value="top">Top</option>
+            <option value="bottom">Bottom</option>
+        </select>
+
+        <select id="horizontalPlacement">
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+        </select>
         <a class="behave-as-button info" href="javascript:;" onclick="toggleNotification()">Toggle notification</a>
         <script>
             function toggleNotification() {
                 var notification = document.getElementById('notification');
-                notification.classList.toggle('show');
+                var vertical = document.getElementById('verticalPlacement');
+                var horizontal = document.getElementById('horizontalPlacement');
+                notification.classList.add('show', horizontal.value, vertical.value);
+                console.log(horizontal.value, vertical.value)
             }
             function closeNotification() {
                 var notification = document.getElementById('notification');
-                notification.classList.remove('show');
+                notification.classList.remove('show', 'left', 'top', 'right', 'bottom');
             }
         </script>
 
@@ -346,13 +351,7 @@
         <br/>
 
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia, quam sit amet porta imperdiet, mauris lectus imperdiet
-            justo, et tristique urna turpis ut sem. Vivamus iaculis tincidunt justo, vel egestas odio ornare a. Cum sociis
-            natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean laoreet posuere tellus at iaculis.
-            Aenean ante nisl, aliquet vel tempor id, aliquam et lacus. Vestibulum pharetra tellus eu orci porttitor, eu elementum
-            felis viverra. Fusce id enim eget sem posuere porta. Duis erat mi, viverra sit amet leo eget, maximus vulputate
-            odio. Aenean purus arcu, lacinia porttitor euismod eget, aliquet at sapien. Fusce sed pharetra elit. Vestibulum
-            id consequat eros. Duis ut hendrerit nibh. Sed condimentum euismod feugiat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia, quam sit amet porta imperdiet, mauris lectus imperdiet justo, et tristique urna turpis ut sem. Vivamus iaculis tincidunt justo, vel egestas odio ornare a. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean laoreet posuere tellus at iaculis. Aenean ante nisl, aliquet vel tempor id, aliquam et lacus. Vestibulum pharetra tellus eu orci porttitor, eu elementum felis viverra. Fusce id enim eget sem posuere porta. Duis erat mi, viverra sit amet leo eget, maximus vulputate odio. Aenean purus arcu, lacinia porttitor euismod eget, aliquet at sapien. Fusce sed pharetra elit. Vestibulum id consequat eros. Duis ut hendrerit nibh. Sed condimentum euismod feugiat.
         </p>
 
         <pre>Defines preformatted text</pre>

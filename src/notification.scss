@@ -5,10 +5,6 @@
   display: flex;
   width: $notification-width;
   height: 0;
-  top: $notification-offset-top;
-  right: $notification-offset-right;
-  left: $notification-offset-left;
-  bottom: $notification-offset-bottom;
   border-radius: $notification-border-radius;
   transition: opacity $notification-transition;
   opacity: 0;
@@ -48,6 +44,28 @@
         color: $fontcolor !important;
       }
     }
+  }
+
+  &.top {
+    top: $notification-margin;
+    right: auto;
+    left: auto;
+    bottom: auto;
+  }
+
+  &.bottom {
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: $notification-margin;
+  }
+
+  &.left {
+    left: $notification-margin;
+  }
+
+  &.right {
+    right: $notification-margin;
   }
 
   &.show {

@@ -6,8 +6,14 @@ VUI (View User Interface, yeah that's the best I can do...) is a simple scss bas
 ## [DEMO](https://kennyrulez.github.io/vui)
 
 # 2018 Update
+## 0.4.4
+Removed the `$font-color` variable, it was useless.
+Notification now have a better naming convention, using top, bottom, left, right. So if you need to show your notification on the top right of the page, use
+`<div class="notification-container top right">`
+Default margin from the page is 10px. Please edit `$notification-margin` accordingly.
+
 ## 0.4.3
-Added equal column widths on table using flexbox. 
+Added equal column widths on table using flexbox.
 Now checkboxes and radios have the same color schema as buttons
 
 ## 0.4.2
@@ -69,7 +75,6 @@ and redefine one of following variables:
 | $heading-font             | heading (h1,h2...) font       | serif         |
 | $heading-line-height      | heading line height           | 1.4           |
 | $heading-font-weight      | heading font weight           | 500           |
-| $font-color:              | default font color            | #333333       |
 | $accent:                  | highlight color               | #2ca8ff       |
 | $green:                   | green color (buttons, alert)  | #2ecc71       |
 | $yellow:                  | yellow color (buttons, alert) | #f1c40f       |
@@ -99,16 +104,15 @@ changed in 0.4.0
 | $nav-text-hover-color     | items text color when hovering         | #fff          |
 
 #### Notification
+changed in 0.4.4
+
 | Name                          | Description                                   | Default           |
 | ------------------------------|-----------------------------------------------| -----------------:|
 | $notification-font-size       | font size                                     | .85em             |
 | $notification-width           | width of the notification                     | 30%               |
 | $notification-width-tablet    | width of the notification in tablet mode      | 70%               |
 | $notification-width           | width of the notification in latpop mode      | 30%               |
-| $notification-offset-top      | offset (margin) top                           | 10px              |
-| $notification-offset-right    | offset (margin) right                         | 10px              |
-| $notification-offset-left     | offset (margin) left                          | auto              |
-| $notification-offset-bottom   | offset (margin) bottom                        | auto              |
+| $notification-margin          | margin                                        | 10px              |
 | $notification-border-radius   | container border radius                       | 10px              |
 | $notification-transition      | appear transition                             | .8s ease-in-out   |
 | $notification-default-color   | default color                                 | #cdcdcd           |
