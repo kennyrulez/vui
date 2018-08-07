@@ -96,8 +96,6 @@ changed in 0.4.0
 #### Navigation bar
 | Name                      | Description                            | Default       |
 | --------------------------|----------------------------------------| -------------:|
-| $nav-border-line          | navigation bar container border width  | 1px           |
-| $nav-border-color         | navigation bar container border color  | #cdcdcd       |
 | $nav-arrow-color          | dropdown arrow color (# is %23 for svg)| %23e67e22     |
 | $nav-hover-color          | color when hovering items              | #2ecc71       |
 | $nav-text-color           | items text color                       | #2ca8ff       |

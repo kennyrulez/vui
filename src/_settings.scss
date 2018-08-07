@@ -13,9 +13,8 @@ $mq-1024:                       64em !default;
 $mq-1280:                       80em !default;
 
 // navigationbar
-$nav-border-line:               1px !default;
-$nav-border-color:              #cdcdcd !default;
-$nav-arrow-color:               '%23e67e22' !default; // arrow is svg, so you need to encode # with %23
+$nav-hamburger-color:           #cf2b1a !default;
+$nav-arrow-color:               #e67e22 !default;
 $nav-hover-color:               #2ecc71 !default;
 $nav-text-color:                #2ca8ff !default;
 $nav-text-hover-color:          #fff !default;

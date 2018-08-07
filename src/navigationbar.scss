@@ -1,9 +1,6 @@
-@import '_settings';
+@import "_settings";
 
-nav[role=navigation] {
-  border-top: $nav-border-line solid $nav-border-color;
-  border-bottom: $nav-border-line solid $nav-border-color;
-
+nav[role="navigation"] {
   #hamburger {
     display: none;
 
@@ -14,14 +11,14 @@ nav[role=navigation] {
     & + label {
       display: none;
 
+      &::after {
+        $svgColor: str-slice(inspect($nav-hamburger-color), 2, 99);
+        content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32px' height='32px'><path fill='%23#{$svgColor}' d='M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z'/></svg>");
+      }
+
       @media screen and (max-width: $mq-568) {
-        clear: both;
         display: block;
-        text-align: center;
-        font-size: 1.3em;
-        line-height: 2.2em;
         cursor: pointer;
-        width: 100%;
       }
     }
   }
@@ -34,6 +31,7 @@ nav[role=navigation] {
     border: none !important;
     display: none;
     flex-direction: column;
+    list-style-type: none;
 
     @media screen and (min-width: $mq-568) {
       display: flex;
@@ -42,12 +40,11 @@ nav[role=navigation] {
     }
 
     li {
-      display: block;
-      width: 100%;
+      flex: 1;
       border: none !important;
       margin: 0;
       padding: 0;
-      list-style-type: none;
+      position: relative;
 
       @media screen and (min-width: $mq-568) {
         height: 100%;
@@ -64,65 +61,53 @@ nav[role=navigation] {
         // 2°+ level items
         & > ul {
           display: block;
-          padding-left: 2rem;
-          background: $nav-hover-color;
-
-          @media screen and (min-width: $mq-568) {
-            padding-left: 0;
-            color: $nav-text-hover-color;
-
-            li {
-              display: flex;
-              padding-right: 2em;
-
-              &:hover
-              &:focus {
-                background: $nav-hover-color;
-                color: $nav-text-hover-color;
-              }
-            }
-          }
         }
       }
 
       a {
         display: block;
+        width: 100%;
         text-decoration: none;
         color: $nav-text-color;
-        padding: 1rem;
+        padding: 0.4em 0.6em;
 
         @media screen and (min-width: $mq-568) {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          text-align: center;
+          padding: 1em;
         }
       }
-    }
 
-    // 2° level items
-    ul {
-      display: none;
-      height: auto;
-      width: auto;
-
-      @media screen and (min-width: $mq-568) {
-        position: absolute;
-      }
-
-      // 3° level items
+      // 2°+ level items
       ul {
+        display: none;
+        flex-direction: column;
+        height: auto;
         @media screen and (min-width: $mq-568) {
-          margin: 0 0 0 100%;
+          position: absolute;
+        }
+
+        li {
+          @media screen and (min-width: $mq-568) {
+            background-color: $nav-hover-color;
+          }
+
+          a {
+            text-align: left;
+          }
+
+          ul {
+            li {
+              padding-left: 1em;
+            }
+          }
         }
       }
-    }
 
-    // helper to show an arrow next to any container menu item
-    .container > a:after {
-      content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><polygon style='fill: #{$nav-arrow-color}!important' points='0,0 10,0 5,5'/></svg>");
-      padding: 3px 2px;
+      &.has-submenu > a:after {
+        $svgColor: str-slice(inspect($nav-arrow-color), 2, 99);
+        content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><polygon style='fill: %23#{$svgColor}' points='0,0 10,0 5,5'/></svg>");
+        padding: 0.3em;
+      }
     }
   }
 }
