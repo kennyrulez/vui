@@ -8,6 +8,10 @@ VUI (View User Interface, yeah that's the best I can do...) is a simple scss bas
 
 # 2018 Update
 
+## 0.5.1
+
+Small fixes on alignments for navigation bar
+
 ## 0.5.0
 
 Updated the navigation bar, to be more solid on mobile. Removed the surrouding lines around, modified the hamburger menu (now colorable).
