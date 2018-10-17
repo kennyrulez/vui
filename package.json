@@ -1,6 +1,6 @@
 {
   "name": "vui.scss",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "View User Interface: a dead simple (S)CSS ui kit",
   "homepage": "http://kennyrulez.github.io/vui",
   "bugs": {
@@ -22,8 +22,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "4.9.2",
-    "nodemon": "1.18.3"
+    "node-sass": "4.9.4",
+    "nodemon": "1.18.4"
   },
   "keywords": [
     "css",

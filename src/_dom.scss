@@ -47,7 +47,7 @@ blockquote {
   border-left: 5px solid #eee;
   font-size: 17.5px;
   margin: 0 0 20px;
-  padding: .8em 20px;
+  padding: 0.8em 20px;
 
   footer {
     &:before {
@@ -61,9 +61,10 @@ blockquote {
 }
 
 button,
-input[type=button],
-input[type=submit],
+input[type="button"],
+input[type="submit"],
 .behave-as-button {
+  font-family: $body-font;
   background-color: $gray;
   border: none;
   border-radius: $border-radius;
@@ -111,7 +112,7 @@ input[type=submit],
 dl {
   dt {
     background-color: $gray;
-    padding: .5em 1em;
+    padding: 0.5em 1em;
     font-weight: bold;
     font-family: $heading-font;
     line-height: $heading-line-height;
@@ -119,7 +120,7 @@ dl {
   }
 
   dd {
-    padding: .5em .3em;
+    padding: 0.5em 0.3em;
   }
 }
 
@@ -138,13 +139,13 @@ details {
     padding: 1%;
     font-weight: bold;
     background-color: darken($gray, 30%);
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
   }
 }
 
 figure {
   figcaption {
-    margin-top: .3em;
+    margin-top: 0.3em;
     font-size: 90%;
     font-style: italic;
   }
@@ -172,17 +173,18 @@ form {
   }
 
   button,
-  input:not([type=checkbox]):not([type=radio]),
+  input:not([type="checkbox"]):not([type="radio"]),
   select,
   textarea {
+    font-family: $body-font;
     width: 100%;
-    padding: 1em !important;
-    margin-bottom: .8em;
+    padding: 1em;
+    margin-bottom: 0.8em;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
   }
 
-  input:not([type=submit]):not([type=button]):not([type=file]):not([type=checkbox]):not([type=radio]),
+  input:not([type="submit"]):not([type="button"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]),
   textarea {
     border-color: $gray;
     font-weight: 400;
@@ -226,13 +228,13 @@ form {
       & + small {
         display: block;
         font-style: italic;
-        padding: .3em .5em;
+        padding: 0.3em 0.5em;
         width: 100% !important;
         color: #fff;
         font-weight: bold;
         padding-left: 1em;
         background-color: lighten($red, 20%);
-        margin-bottom: .7em;
+        margin-bottom: 0.7em;
         border-bottom-left-radius: $border-radius;
         border-bottom-right-radius: $border-radius;
       }
@@ -246,20 +248,23 @@ form {
     border-radius: $border-radius;
     color: inherit;
     outline: none;
-    padding: .3% .5%;
+    padding: 1em 0;
     vertical-align: middle;
+    text-indent: 0.3em;
 
     &[size],
     &[multiple] {
       height: auto;
 
       option {
-        padding: .3% .5%;
+        padding: 0.3% 0.5%;
       }
     }
 
     &:not([multiple]):not([size]) {
-      background: #fff url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center/.4rem .5rem;
+      background: #fff
+        url("data:image/svg+xml;charset=utf8, %3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E")
+        no-repeat right 0.35rem center/.4rem 0.5rem;
     }
 
     &::-ms-expand {
@@ -283,8 +288,8 @@ form {
   // Adapted from this beautiful pen: https://codepen.io/raubaca/pen/ONzBxP
   .input-radio,
   .input-checkbox {
-    input[type=checkbox],
-    input[type=radio] {
+    input[type="checkbox"],
+    input[type="radio"] {
       position: absolute;
       opacity: 0;
       z-index: -1;
@@ -302,7 +307,7 @@ form {
       padding-right: 10px;
       line-height: 36px;
       cursor: pointer;
-      transition: .25s all ease;
+      transition: 0.25s all ease;
 
       &::before {
         content: " ";
@@ -314,7 +319,7 @@ form {
         height: 24px;
         border: 2px solid $accent;
         border-radius: 4px;
-        transition: .25s all ease;
+        transition: 0.25s all ease;
       }
     }
 
@@ -330,14 +335,14 @@ form {
       }
     }
 
-    input[type=radio] {
+    input[type="radio"] {
       & + label::before {
         border-radius: 18px;
       }
     }
 
-    input[type=radio],
-    input[type=checkbox] {
+    input[type="radio"],
+    input[type="checkbox"] {
       &:checked + label {
         padding-left: 10px;
 
@@ -399,13 +404,13 @@ ul {
 
   li {
     border-left: 3px solid $gray;
-    margin-bottom: .3%;
-    padding: .3% 1%;
+    margin-bottom: 0.3%;
+    padding: 0.3% 1%;
     line-height: 1.5em;
 
     ul,
     ol {
-      margin: .8% 0 0 0;
+      margin: 0.8% 0 0 0;
 
       li {
         border-left-color: $gray;
@@ -421,13 +426,13 @@ ol {
 
   li {
     counter-increment: step-counter;
-    margin-bottom: .3em;
-    padding: .3% 1%;
+    margin-bottom: 0.3em;
+    padding: 0.3% 1%;
     line-height: 1.5em;
 
     ul,
     ol {
-      margin: .8% 0 0 0;
+      margin: 0.8% 0 0 0;
     }
 
     &::before {
@@ -436,7 +441,7 @@ ol {
       font-size: 80%;
       background-color: $gray;
       font-weight: bold;
-      padding: .3% .8%;
+      padding: 0.3% 0.8%;
       border-radius: $border-radius;
     }
   }
@@ -501,7 +506,7 @@ pre {
   color: #fff;
   padding: 1% 2%;
   border-radius: $border-radius;
-  border-left: .8em solid $orange;
+  border-left: 0.8em solid $orange;
 }
 
 progress {
@@ -539,7 +544,7 @@ progress {
 
 q {
   &::before {
-    content: - \;;
+    content: -\;;
   }
 
   &::after {
