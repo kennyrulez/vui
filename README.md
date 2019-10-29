@@ -1,5 +1,7 @@
 # VUI
 
+## This packages is deprecated. Please move to a better, modern css framework like bulma or my new favorite tool, tailwind css.
+
 ### A dead simple (S)CSS ui kit
 
 VUI (View User Interface, yeah that's the best I can do...) is a simple scss based ui kit. I really love other frameworks out there (bulma, angular material, uikit, spectre, etc...), but I prefer one that style directly the dom, without the clutter of wrapping them on a hell of tags (whenever possible obviously).
